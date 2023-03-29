@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pricing component with toggle</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Switch "Header" Container -->
+      <div class="switch_container">
+        <h1>Our Pricing</h1>
+        <!-- Container with Text -->
+        <div class="slide_container">
+          <p>Annually</p>
+          <!-- Slide Ball with Checkbox -->
+          <div class="slide_button_container">
+            <input type="checkbox" id="checkbox" class="checkbox" />
+            <label for="checkbox">
+              <div class="slide_ball"></div>
+            </label>
+          </div>
+          <p>Monthly</p>
+        </div>
+      </div>
+      <!-- Cards Container - Basic,Professional,Master -->
+      <div class="cards">
+        <!-- Basic Container -->
+        <div class="basic">
+          <p>Basic</p>
+          <div class="cash_container">
+            <p class="cash">&dollar;</p>
+            <span class="cash_amount basic_cash">19.99</span>
+          </div>
+          <div class="line"></div>
+          <p>500 GB Storage</p>
+          <div class="line"></div>
+          <p>2 Users Allowed</p>
+          <div class="line"></div>
+          <p>Send up to 3 GB</p>
+          <div class="line"></div>
+          <button type="button">Learn More</button>
+        </div>
+        <!-- Professional Container -->
+        <div class="professional">
+          <p>Professional</p>
+          <div class="cash_container">
+            <p class="cash">&dollar;</p>
+            <span class="cash_amount professional_cash">24.99</span>
+          </div>
+          <div class="line"></div>
+          <p>1 TB Storage</p>
+          <div class="line"></div>
+          <p>5 Users Allowed</p>
+          <div class="line"></div>
+          <p>Send up to 10 GB</p>
+          <div class="line"></div>
+          <button type="button">Learn More</button>
+        </div>
+        <!-- Master Container -->
+        <div class="master">
+          <p>Master</p>
+          <div class="cash_container">
+            <p class="cash">&dollar;</p>
+            <span class="cash_amount master_cash">39.99</span>
+          </div>
+          <div class="line"></div>
+          <p>2 TB Storage</p>
+          <div class="line"></div>
+          <p>10 Users Allowed</p>
+          <div class="line"></div>
+          <p>Send up to 20 GB</p>
+          <div class="line"></div>
+          <button type="button">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Norbert Kovács</a>.
+  </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>

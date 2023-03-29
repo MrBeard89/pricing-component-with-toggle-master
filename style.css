@@ -1,0 +1,220 @@
+/******************** Imported Fonts ********************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/******************** Universal Selector ********************/
+* {
+  padding: 0;
+  margin: 0;
+}
+/******************** Body ********************/
+body {
+  background-image: url(../pricing-component-with-toggle-master/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top -35px right -190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(240, 78%, 98%);
+}
+
+/******************** Main Containers ********************/
+.container {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: fit-content;
+  margin-bottom: 3rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.switch_container h1 {
+  color: hsl(232, 13%, 33%);
+  font-size: 22px;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.slide_container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  color: hsl(234, 14%, 74%);
+  font-size: 15px;
+  width: fit-content;
+}
+.slide_button_container {
+  margin-top: -1rem;
+}
+
+/******************Checkbox,Sliding ball*****************/
+label {
+  background: hsl(237, 63%, 64%);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+label:hover {
+  background-color: hsl(236, 72%, 79%);
+}
+.checkbox {
+  opacity: 0;
+}
+.checkbox:checked + label .slide_ball {
+  transform: translateX(24px);
+}
+
+.slide_ball {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: transform 0.2s linear;
+}
+
+/******************Card Divs******************/
+.basic,
+.professional,
+.master {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  align-items: center;
+  background-color: #fff;
+  color: hsl(232, 13%, 33%);
+  width: 340px;
+  height: 400px;
+  border-radius: 0.8rem;
+  text-align: center;
+  padding-top: 1.2rem;
+  box-shadow: 0px 0px 25px 3px hsla(237, 63%, 64%, 0.541);
+}
+.basic:hover,
+.master:hover {
+  background-image: linear-gradient(
+    180deg,
+    hsl(237, 49%, 83%),
+    hsl(236, 38%, 91%)
+  );
+  color: #fff;
+}
+.professional {
+  background-image: linear-gradient(
+    180deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #fff;
+}
+/******************Text and Dollar amount******************/
+p {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.cash_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cash {
+  display: flex;
+  font-size: 2rem;
+  padding-top: 0;
+}
+.cash_amount {
+  display: flex;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.line {
+  width: 300px;
+  height: 1px;
+  background-color: hsl(234, 14%, 74%);
+  outline: none;
+  border: none;
+}
+
+/******************** Button styling ********************/
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2.3rem;
+  color: hsl(240, 78%, 98%);
+  background-image: linear-gradient(
+    90deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  width: 300px;
+  height: 3rem;
+  border: none;
+  border-radius: 8px;
+}
+.professional button {
+  color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(
+    90deg,
+    hsl(240, 78%, 98%),
+    hsl(240, 78%, 98%)
+  );
+  cursor: pointer;
+}
+button:hover {
+  color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(
+    90deg,
+    hsl(240, 78%, 98%),
+    hsl(240, 78%, 98%)
+  );
+  cursor: pointer;
+}
+button:active {
+  border: 1px solid hsl(232, 13%, 33%);
+}
+/******************** Media Queries ********************/
+@media only screen and (min-width: 1440px) {
+  .container {
+    margin-top: 8rem;
+  }
+  .cards {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    transition: 0.5s ease;
+  }
+  .professional {
+    padding-top: 2.5rem;
+    height: 470px;
+  }
+  .basic,
+  .master {
+    height: 450px;
+    z-index: 1;
+  }
+  body {
+    height: 100vh;
+    background-image: url(../pricing-component-with-toggle-master/images/bg-top.svg),
+      url(../pricing-component-with-toggle-master/images/bg-bottom.svg);
+    background-position: top -25px right -10px, bottom -25px left -10px;
+    background-size: 30rem, 35rem;
+  }
+}
